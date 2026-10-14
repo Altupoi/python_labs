@@ -12,7 +12,7 @@
 # print("Гіпотенуза:",b)
 # packets = ceil(items / fit)
 # print("Потрібно упаковок:",packets)
-import datetime
+
 #2
 # import random
 # from operator import countOf
