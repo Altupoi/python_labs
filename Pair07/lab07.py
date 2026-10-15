@@ -84,7 +84,7 @@ with open("report.txt", "w", encoding="utf-8") as file:
         avg = avg_grade(grades)
         if avg > Best[0][1]:
             Best = [[name, avg]]
-        elif avg == Best[0][1]:
+        elif avg == Best[0][1] and Best[0][0] != name:
             Best.append([name, avg])
             
     for i in range(len(Best)):
