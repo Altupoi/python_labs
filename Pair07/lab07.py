@@ -75,6 +75,7 @@ with open("grades.csv", "r", encoding="utf-8") as file:
     for i in range(len(Data)):
         Grades = Data[i][1].split(" ")
         for i in range(len(Grades)): Grades[i] = int(Grades[i])
+        Data[i][1] = Grades
 
 with open("report.txt", "w", encoding="utf-8") as file:
     Best = [Data[0][1]]
