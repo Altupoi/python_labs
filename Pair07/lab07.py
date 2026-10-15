@@ -85,8 +85,7 @@ with open("report.txt", "w", encoding="utf-8") as file:
         if avg > Best[0][1]:
             Best = [[name, avg]]
         elif avg == Best[0][1] and Best[0][0] != name:
+            Best.append([name, avg])
 
     for i in range(len(Best)):
         print(f"{Best[i][0]} — оцінок: {len(Data[i][1])} — середній: {Best[i][1]}", file=file)
-            Best.append([name, avg])
-        
