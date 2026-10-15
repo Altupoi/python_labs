@@ -55,37 +55,37 @@
 #         print(f"{name};{score}", file=file)
 
 #4
-def avg_grade(grades):
-    return sum(grades) / len(grades)
+# def avg_grade(grades):
+#     return sum(grades) / len(grades)
 
-Data = []
-with open("grades.csv", "r", encoding="utf-8") as file:
-    lines = file.readlines()
-    for line in lines:
-        name, subject, grade = line.strip("\n").split(";")
-        index = -1
-        for i in range(len(Data)):
-            if Data[i][0] == name:
-                index = i
+# Data = []
+# with open("grades.csv", "r", encoding="utf-8") as file:
+#     lines = file.readlines()
+#     for line in lines:
+#         name, subject, grade = line.strip("\n").split(";")
+#         index = -1
+#         for i in range(len(Data)):
+#             if Data[i][0] == name:
+#                 index = i
 
-        if index == -1:
-            Data.append([name, grade])
-        else:
-            Data[index][1] += " "+grade
-    for i in range(len(Data)):
-        Grades = Data[i][1].split(" ")
-        for j in range(len(Grades)): Grades[j] = int(Grades[j])
-        Data[i][1] = Grades
+#         if index == -1:
+#             Data.append([name, grade])
+#         else:
+#             Data[index][1] += " "+grade
+#     for i in range(len(Data)):
+#         Grades = Data[i][1].split(" ")
+#         for j in range(len(Grades)): Grades[j] = int(Grades[j])
+#         Data[i][1] = Grades
 
-with open("report.txt", "w", encoding="utf-8") as file:
-    Best = [[Data[0][0],avg_grade(Data[0][1])]]
+# with open("report.txt", "w", encoding="utf-8") as file:
+#     Best = [[Data[0][0],avg_grade(Data[0][1])]]
 
-    for name, grades in Data:
-        avg = avg_grade(grades)
-        if avg > Best[0][1]:
-            Best = [[name, avg]]
-        elif avg == Best[0][1] and Best[0][0] != name:
-            Best.append([name, avg])
+#     for name, grades in Data:
+#         avg = avg_grade(grades)
+#         if avg > Best[0][1]:
+#             Best = [[name, avg]]
+#         elif avg == Best[0][1] and Best[0][0] != name:
+#             Best.append([name, avg])
 
-    for i in range(len(Best)):
-        print(f"{Best[i][0]} — оцінок: {len(Data[i][1])} — середній: {Best[i][1]}", file=file)
+#     for i in range(len(Best)):
+#         print(f"{Best[i][0]} — оцінок: {len(Data[i][1])} — середній: {Best[i][1]}", file=file)
