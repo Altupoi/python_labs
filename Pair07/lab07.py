@@ -90,6 +90,4 @@ with open("report.txt", "w", encoding="utf-8") as file:
     for i in range(len(Best)):
         print(f"{Best[i][0]} — оцінок: {len(Data[i][1])} — середній: {Best[i][1]}", file=file)
             Best.append([name, avg])
-            
-    for i in range(len(Best)):
-        print(f"{Best[i][0]} — оцінок: {len(Data[i][1])} — середній: {Best[i][1]}", file=file)
+        
