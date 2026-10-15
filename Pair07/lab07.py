@@ -74,7 +74,7 @@ with open("grades.csv", "r", encoding="utf-8") as file:
             Data[index][1] += " "+grade
     for i in range(len(Data)):
         Grades = Data[i][1].split(" ")
-        for i in range(len(Grades)): Grades[i] = int(Grades[i])
+        for j in range(len(Grades)): Grades[j] = int(Grades[j])
         Data[i][1] = Grades
 
 with open("report.txt", "w", encoding="utf-8") as file:
