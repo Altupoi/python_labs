@@ -78,12 +78,12 @@ with open("grades.csv", "r", encoding="utf-8") as file:
         Data[i][1] = Grades
 
 with open("report.txt", "w", encoding="utf-8") as file:
-    Best = [Data[0][1]]
+    Best = [avg_grade(Data[0][1])]
     for name, grades in Data:
         avg = avg_grade(grades)
-        if avg > Best[1]:
+        if avg > Best[0]:
             Best = [name, avg]
-        elif avg == Best[1]:
+        elif avg == Best[0]:
             Best.append([name, avg])
     for name, avg in Best:
         print(f"Anna — оцінок: 2 — середній: 10.50", file=file)
