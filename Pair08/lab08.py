@@ -22,7 +22,6 @@
 #         print("Помилка: потрібно ввести цілі числа.")
 # except ZeroDivisionError:
 #     print("Помилка: на нуль ділити не можна.")
-from pstats import func_get_function_name
 
 #2
 # grade = 0
