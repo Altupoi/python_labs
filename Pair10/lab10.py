@@ -14,7 +14,8 @@ class Student(Person):
 
 student1 = Student("Anna Ivanenko", "IT-10")
 student2 = Student("Ivan Potapenko", "МА-10")
-# print(student1.info())
+print(student1.info())
+
 #2
 class Teacher(Person):
     def __init__(self, name, subject):
@@ -29,8 +30,8 @@ MixedList = [
     student2,
     Teacher("Svitlana Volodymirivna", "Maths")
 ]
-# for person in MixedList:
-#     print(person.info())
+for person in MixedList:
+    print(person.info())
 
 #3
 class Course:
